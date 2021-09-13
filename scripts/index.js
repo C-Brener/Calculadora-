@@ -21,7 +21,8 @@ if (operationCalc == 1) {
     operationResult = firstValue * secondValue;
     finalResult = (`${firstValue}x${secondValue}=${operationResult}`)
 }else{
-    operationResult = firstValue
+    operationResult = firstValue / secondValue;
+    finalResult = (`${firstValue}/${secondValue}=${operationResult}`)
 }
 
 
