@@ -1,0 +1,29 @@
+let finalResult;
+let operationResult;
+let firstValue = Number(prompt("Digite o primeiro valor"));
+let secondValue = Number(prompt("Digite o segundo valor"));
+let operationCalc = prompt(`
+Selecione uma opção:
+(1) Soma
+(2) Subtração
+(3) Multiplicação
+(4) Divisão
+`);
+
+if (operationCalc == 1) {
+    operationResult = firstValue + secondValue;
+    finalResult = (`${firstValue}+${secondValue}=${operationResult}`) 
+    
+}else if(operationCalc == 2){
+    operationResult = firstValue - secondValue;
+    finalResult = (`${firstValue}-${secondValue}=${operationResult}`)
+}else if(operationCalc == 3){
+    operationResult = firstValue * secondValue;
+    finalResult = (`${firstValue}x${secondValue}=${operationResult}`)
+}else{
+    operationResult = firstValue
+}
+
+
+
+document.getElementById("result").innerHTML = finalResult;
