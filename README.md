@@ -1,1 +1,6 @@
 # Calculadora
+
+# TECNOLOGIAS UTILIZADAS:
+# HTML5
+# CSS3
+# JAVASCRIPT
