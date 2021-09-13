@@ -26,4 +26,6 @@ if (operationCalc == 1) {
 
 
 
-document.getElementById("result").innerHTML = finalResult;
+document.getElementById("result").innerHTML = finalResult; // Faz a substituição do conteudo
+
+// document.write(`<h2>${finalResult} </h2>`) - O document.write não faz a substituição caso haja conteudo na tag
