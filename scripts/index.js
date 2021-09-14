@@ -1,32 +1,27 @@
+import { calculadora } from './functionCalc.js';
+let calc = calculadora;
 let finalResult;
-let operationResult;
-let firstValue = Number(prompt("Digite o primeiro valor"));
-let secondValue = Number(prompt("Digite o segundo valor"));
-let operationCalc = prompt(`
-Selecione uma opção:
-(1) Soma
+let firstValue = Number(prompt("Digite um numero"))
+let secondValue = Number(prompt("Digite outro numero"))
+let operationValue = prompt(`Selecione uma opção:
+(1) Adição
 (2) Subtração
 (3) Multiplicação
 (4) Divisão
-`);
+(5) Sair
+`)
 
-if (operationCalc == 1) {
-    operationResult = firstValue + secondValue;
-    finalResult = (`${firstValue}+${secondValue}=${operationResult}`) 
-    
-}else if(operationCalc == 2){
-    operationResult = firstValue - secondValue;
-    finalResult = (`${firstValue}-${secondValue}=${operationResult}`)
-}else if(operationCalc == 3){
-    operationResult = firstValue * secondValue;
-    finalResult = (`${firstValue}x${secondValue}=${operationResult}`)
-}else{
-    operationResult = firstValue / secondValue;
-    finalResult = (`${firstValue}/${secondValue}=${operationResult}`)
+if (operationValue == 1) {
+    finalResult = (`${firstValue}+${secondValue}=${calc.somar(firstValue, secondValue)}`)
+} else if (operationValue == 2) {
+    finalResult = (`${firstValue}-${secondValue}=${calc.subtrair(firstValue, secondValue)}`)
+} else if (operationValue == 3) {
+    finalResult = (`${firstValue}x${secondValue}=${calc.multiplicar(firstValue, secondValue)}`)
+} else if (operationValue == 4) {
+    finalResult = (`${firstValue}/${secondValue}=${calc.dividir(firstValue, secondValue)}`)
+} else {
+    finalResult = ("Bye")
 }
 
 
-
-document.getElementById("result").innerHTML = finalResult; // Faz a substituição do conteudo
-
-// document.write(`<h2>${finalResult} </h2>`) - O document.write não faz a substituição caso haja conteudo na tag
+document.getElementById("result").innerHTML = finalResult;
