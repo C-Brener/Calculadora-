@@ -1,5 +1,6 @@
+import * as calculadora from './calcFunctions.js'
+const calc = calculadora
 let finalResult;
-let operationResult;
 let firstValue = Number(prompt("Digite o primeiro valor"));
 let secondValue = Number(prompt("Digite o segundo valor"));
 let operationCalc = prompt(`
@@ -9,13 +10,10 @@ Selecione uma opção:
 (3) Multiplicação
 (4) Divisão
 `);
-
 if (operationCalc == 1) {
-    operationResult = firstValue + secondValue;
-    finalResult = (`${firstValue}+${secondValue}=${operationResult}`) 
+    finalResult = (`${firstValue}+${secondValue}=${calc.soma(firstValue, secondValue)}`) 
     
 }else if(operationCalc == 2){
-    operationResult = firstValue - secondValue;
     finalResult = (`${firstValue}-${secondValue}=${operationResult}`)
 }else if(operationCalc == 3){
     operationResult = firstValue * secondValue;
@@ -24,9 +22,6 @@ if (operationCalc == 1) {
     operationResult = firstValue / secondValue;
     finalResult = (`${firstValue}/${secondValue}=${operationResult}`)
 }
-
-
-
 document.getElementById("result").innerHTML = finalResult; // Faz a substituição do conteudo
 
 // document.write(`<h2>${finalResult} </h2>`) - O document.write não faz a substituição caso haja conteudo na tag
